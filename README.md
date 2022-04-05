@@ -17,6 +17,10 @@ I'm assuming you're using a system with a UNIX-compatible command line like Mac
 OS X, Linux, Solaris, or most other things that aren't Windows. If not, you'll
 need to work out how to do some of this stuff on your CLI.
 
+You're also going to need perl (5, not Rakudo) installed, as well as cpanm (this
+can be installed with `cpan App::Cpanminus` on most perl distributions), and
+Metaboss (link above).
+
 First, you'll need to decode the mint list for your NFT using metaboss:
 
 ```
@@ -29,9 +33,16 @@ So, if we're doing this for Kitten Coup using the SSC DAO public RPC:
 metaboss --rpc https://ssc-dao.genesysgo.net decode mint --list-file kittencoup.json -o input
 ```
 
+Now, pull the dependencies for the update tool:
+
+```
+cd /path/to/where/update/tool/lives
+cpanm --installdeps .
+```
 Now, make a directory for the output files:
 
 ```
+cd /path/to/your/decoded/files
 mkdir output
 ```
 
