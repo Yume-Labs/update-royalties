@@ -1,4 +1,4 @@
-# Royalty Update Tool
+# Royalty Update Tool (Solana)
 
 ## About This Tool
 
